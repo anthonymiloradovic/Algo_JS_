@@ -1,3 +1,4 @@
+let colors = require('colors');
 const fs = require("fs"); // Importe la bibliothèque 'fs' de Node.js qui est utilisée pour lire et écrire des fichiers.
 
 // déclaration de la fonction 'findSumPairs' qui prend en entrée un tableau 'numbers' et un nombre 'k'
@@ -19,7 +20,12 @@ function findSumPairs(numbers, k) {
   const numbers = fs.readFileSync(file, "utf-8").split(" ").map(Number); // On lit le contenu du fichier en utilisant 'readFileSync' et on sépare chaque nombre avec 'split' puis on les convertit en nombres avec 'map'
   const k = 2222; 
   const {compare, result} = findSumPairs(numbers, k) // On appelle la fonction findSumPairs et on stock les résultats dans des variables
-  console.log("Algorithme utilisé : O(n) "); 
-  console.log(`Nombre de comparaisons effectuées : ${compare}`);
-  console.log("Liste de nombres utilisée : " + numbers);
-  console.log(`Résultat : ${result}`);
+  console.log("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°".brightYellow);
+  console.log(" ");
+  console.log("Algorithme utilisé : O(n) ".brightBlue); 
+  console.log(`Nombre de comparaisons effectuées : ${compare}`.brightBlue);
+  console.log(`Liste de nombres utilisée : ${numbers}`.brightBlue);
+  console.log(`Résultat : ${result}`.brightGreen);
+  console.log(" ");
+  console.log("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°".brightYellow);
+  

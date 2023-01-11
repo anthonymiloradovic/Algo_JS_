@@ -1,3 +1,4 @@
+let colors = require('colors');
 const fs = require("fs"); //importe le module fs pour lire les données depuis un fichier
 
 function buildings_with_west_view(building_heights) { // déclare une fonction qui prend une liste de hauteur de bâtiments en entrée
@@ -16,7 +17,11 @@ function buildings_with_west_view(building_heights) { // déclare une fonction q
 
 const file = 'data.txt'; // nom du fichier contenant les données
 const building_heights = fs.readFileSync(file, "utf-8").split(" ").map(Number); // lit le fichier, split les données en utilisant les espaces comme séparateur et convertit les strings en nombres
-console.log("Algorithme utilisé : O(n²) "); // indique que l'algorithme utilisé a une complexité en O(n²)
-console.log(`Nombre de comparaisons effectuées : ${(building_heights.length * (building_heights.length-1))/2}`);// indique le nombre de comparaisons effectuées
-console.log("Liste de hauteur utilisée : " + building_heights); // affiche la liste de hauteur utilisée
-console.log(`Résultat : ${buildings_with_west_view(building_heights)}`);// affiche le résultat de la fonction qui est le nombre de bâtiments ayant une vue vers l'ouest
+console.log("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°".brightCyan);
+console.log(" ");
+console.log("Algorithme utilisé : O(n²) ".brightBlue); // indique que l'algorithme utilisé a une complexité en O(n²)
+console.log(`Nombre de comparaisons effectuées : ${(building_heights.length * (building_heights.length-1))/2}`.brightBlue);// indique le nombre de comparaisons effectuées
+console.log(`Liste de hauteur utilisée : ${building_heights}`.brightBlue); // affiche la liste de hauteur utilisée
+console.log(`Résultat : ${buildings_with_west_view(building_heights)}`.brightGreen);// affiche le résultat de la fonction qui est le nombre de bâtiments ayant une vue vers l'ouest
+console.log(" ");
+console.log("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°".brightCyan);
